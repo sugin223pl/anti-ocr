@@ -8,6 +8,6 @@ Our intuitive interface makes it easy to create visually stunning ad images that
 
 ![Screenshot 1](https://i.imgur.com/WA1lrCH.png)
 ![Screenshot 2](https://i.imgur.com/zfKY3bm.png)
-![Screenshot 3](https://i.imgur.com/Tb6DzQ4.png)
+![Screenshot 3](https://i.imgur.com/Tb6DzQ4.png | width=100)
 
 Take control of your online presence with AntiOCR. [Download now](https://github.com/vuecodes/anti-ocr/releases/latest) and experience the freedom to advertise confidently, knowing that your privacy is protected every step of the way.
