@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 require('fix-esm').register()
-const { app, shell, BrowserWindow, ipcMain, dialog, autoUpdater } = require('electron')
+const { app, shell, BrowserWindow, ipcMain, dialog } = require('electron')
 const { join, basename, extname } = require('node:path')
 // const { initialize, trackEvent } = require('@aptabase/electron/main')
 const { readFileSync, writeFileSync } = require('node:fs')
