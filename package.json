@@ -16,20 +16,25 @@
     "build": "npm run typecheck && electron-vite build",
     "postinstall": "electron-builder install-app-deps",
     "build:unpack": "npm run build && electron-builder --dir",
+    "build:winp": "npm run build && electron-builder --win portable",
     "build:win": "npm run build && electron-builder --win",
     "build:mac": "npm run build && electron-builder --mac",
     "build:linux": "npm run build && electron-builder --linux"
   },
   "dependencies": {
+    "@aptabase/electron": "^0.3.1",
     "@electron-toolkit/preload": "^3.0.0",
     "@electron-toolkit/utils": "^3.0.0",
     "@picocss/pico": "^2.0.6",
-    "@web-std/file": "^3.0.3",
+    "ajv": "^8.12.0",
+    "electron-debug": "^3.2.0",
+    "electron-store": "^8.2.0",
+    "electron-unhandled": "^4.0.1",
     "electron-updater": "^6.1.8",
-    "handwritten.js": "^18.11.3",
+    "fix-esm": "^1.0.1",
     "jimp": "^0.22.12",
-    "mime": "^4.0.1",
     "mime-types": "^2.1.35",
+    "node-machine-id": "^1.1.12",
     "piexifjs": "^1.0.6"
   },
   "devDependencies": {

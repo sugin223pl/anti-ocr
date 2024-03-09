@@ -2,7 +2,13 @@
   $theme-color: "grey"
 );
 @use "@picocss/pico/scss/colors" as *;
-
+body {
+  div#clear {
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+  }
+}
 body>main {
   display: block;
   img {
@@ -12,7 +18,23 @@ body>main {
     margin-bottom: var(--pico-block-spacing-vertical);
     margin-inline: auto;
   }
+  dialog.activation-modal {
+    .lic {
+      padding: 0 5rem;
+      text-align: center;
 
+      div.status {
+        padding-bottom: 1rem;
+      }
+    }
+    .lic.errors, .lic.errors>p {
+      color: #f65239;
+
+      div.status {
+        color: #ff6a00;
+      }
+    }
+  }
   form {
 
     .file {
