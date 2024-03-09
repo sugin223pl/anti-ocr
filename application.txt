@@ -1,0 +1,7 @@
+Thank you for purchasing our application! We truly appreciate your support. To download the app and get started, please visit the following URL:
+
+https://github.com/vuecodes/anti-ocr/releases/latest
+
+If you have any questions, feedback, or need assistance, don't hesitate to reach out to us. We're here to help ensure you have a great experience with our product.
+
+Once again, thank you for choosing our application. We hope you find it valuable and enjoyable to use!

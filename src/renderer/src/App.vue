@@ -1,3 +1,4 @@
+<!-- eslint-disable @typescript-eslint/no-explicit-any -->
 <script setup lang="ts">
 import { ref, computed, onBeforeMount, reactive } from 'vue'
 import mainIcon from './assets/img/icon.png?url'
@@ -165,6 +166,11 @@ async function checkLicense() {
   isChecking.value = true
   await window.electron.ipcRenderer.send('GATE_SUBMIT', { key: Lic.key })
 }
+async function purchase() {
+  isChecking.value = true
+  await window.electron.ipcRenderer.send('purchase', 'https://vuescripts.lemonsqueezy.com/checkout/buy/6fafa100-233b-4090-838b-37d77ead7f1e')
+}
+
 window.electron.ipcRenderer.on('GATE_RESPONSE', (_event, response) => {
   Object.assign(Lic, { ...response })
   console.log(Lic)
@@ -197,7 +203,7 @@ function openModal(action: boolean) {
         <span style="margin: 0 5px"
           ><a style="color: black" href="#" @click.prevent="openModal(true)">here</a></span
         >
-        <span>to enter license key. </span>
+        <span>to enter license key. </span> or <a style="color: black" href="#" @click.prevent="purchase">purchase</a> application
       </small>
     </div>
   </teleport>

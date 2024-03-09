@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 require('fix-esm').register()
-const { app, shell, BrowserWindow, ipcMain, dialog } = require('electron')
+const { app, shell, BrowserWindow, ipcMain, dialog, autoUpdater } = require('electron')
 const { join, basename, extname } = require('node:path')
 // const { initialize, trackEvent } = require('@aptabase/electron/main')
 const { readFileSync, writeFileSync } = require('node:fs')
@@ -14,6 +15,7 @@ const unhandled = require('electron-unhandled')
 const fetch = require('node-fetch')
 const MainStore = require('electron-store')
 
+//const autoUpdater = require("electron-updater").autoUpdater
 const machineID = machineIdSync({ original: true })
 const schema = {
   LICENSE_KEY: {
@@ -163,7 +165,9 @@ app.whenReady().then(() => {
   })
 
   // trackEvent('app_started')
-
+  ipcMain.on('purchase', async (_event, purchaseURL) => {
+    shell.openExternal(purchaseURL)
+  })
   ipcMain.on('GATE_ACTIVATE', async (event, { key }) => {
     const { valid, error } = await LemonActivation(key, 'activate')
     mainStore.set('LICENSE_KEY', valid ? key : '')
