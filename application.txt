@@ -6,4 +6,8 @@ Gone are the days of worrying about automated scanning systems detecting your ph
 
 Our intuitive interface makes it easy to create visually stunning ad images that attract attention while preserving your privacy. Whether you're a small business owner, freelancer, or individual seller, AntiOCR empowers you to reach your audience effectively without compromising your personal information.
 
+![Screenshot 1](https://i.imgur.com/WA1lrCH.png)
+![Screenshot 2](https://i.imgur.com/zfKY3bm.png)
+![Screenshot 3](https://i.imgur.com/Tb6DzQ4.png)
+
 Take control of your online presence with AntiOCR. [Download now](https://github.com/vuecodes/anti-ocr/releases/latest) and experience the freedom to advertise confidently, knowing that your privacy is protected every step of the way.
